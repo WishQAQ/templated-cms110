@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="/wapskin/css.css" rel="stylesheet" type="text/css">
+<script type='text/javascript' src='/wapskin/js/jquery-1.10.2.min.js'></script>
+<script type='text/javascript' src='/wapskin/js/jquery.SuperSlide.js'></script>
+<script type='text/javascript' src='/wapskin/js/public.js'></script>
+
+</head>
+
+<body>
+{dede:php}
+pasterTempletDiy("wap/head.htm");
+{/dede:php}
+<div class="main">
+<div class="banner">
+<div id="slideBox" class="slideBox">
+<div class="hd">
+<ul><li></li><li></li><li></li></ul>
+</div>
+<div class="bd">
+<ul>
+<li><a href="javascript:;" target="_blank"><img src="/wapskin/banner1.jpg" /></a></li>
+<li><a href="javascript:;" target="_blank"><img src="/wapskin/banner2.jpg" /></a></li>
+<li><a href="javascript:;" target="_blank"><img src="/wapskin/banner3.jpg" /></a></li>
+</ul>
+</div>
+</div>
+</div>
+<script language="javascript">
+jQuery(".slideBox").slide({mainCell:".bd ul",effect:"fold",autoPlay:true,trigger:"click"});
+</script>
+<div class="about">
+<h1><span>关于我们</span>   {dede:type typeid='1'}<a href="/waplist.php?tid=[field:id/]">更多>></a>{/dede:type}</h1>
+<ul>
+<dl class="dl1"><img src="/wapskin/about.jpg"/></dl>
+<dl class="dl2">
+{dede:sql sql='Select content from dede_arctype where id=9'}
+
+[field:content function='cn_substr(html2text(@me),300)'/]
+
+{/dede:sql}
+</dl>
+</ul>
+</div>
+
+<div class="gongyi">
+<h1><span>产品中心</span>   {dede:type typeid='2'}<a href="/waplist.php?tid=[field:id/]">更多>></a>{/dede:type}</h1>
+<ul>
+{dede:arclist typeid='2' row='6'}
+<li><a href="/wapview.php?aid=[field:id/]"><img src="[field:litpic/]"/><span>[field:title/]</span></a></li>
+{/dede:arclist}
+</ul>
+</div>
+
+
+<div class="news">
+<h1><span>新闻中心</span>   {dede:type typeid='5'}<a href="/waplist.php?tid=[field:id/]">更多>></a>{/dede:type}</h1>
+<ul>
+{dede:arclist typeid='5' titlelen='45' row='10'}
+<li><i>[[field:typename/]]</i><a href="/wapview.php?aid=[field:id/]">[field:title/]</a><em>[field:pubdate function=MyDate('m-d',@me)/]</em></li>
+{/dede:arclist}
+</ul>
+</div>
+<div class="gongcheng">
+<h1><span>客户案例</span>   {dede:type typeid='3'}<a href="/waplist.php?tid=[field:id/]">更多>></a>{/dede:type}</h1>
+<ul>
+{dede:arclist typeid='3' row='6'}
+<li><a href="/wapview.php?aid=[field:id/]"><img src="[field:litpic/]"/><span>[field:title/]</span></a></li>
+{/dede:arclist}
+</ul>
+</div>
+
+</div>
+{dede:php}
+pasterTempletDiy("wap/footer.htm");
+{/dede:php}
+</body>
+</html>

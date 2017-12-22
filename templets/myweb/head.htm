@@ -1,0 +1,73 @@
+<style>
+.wap_ma{ width:80px; height:95px; position:absolute; top:15px; right:250px;}
+.wap_ma img{width:80px; height:80px;}
+.wap_ma span{width:80px; height:15px; line-height:15px; font-size:12px; font-family:"宋体"; float:left; text-align:center;}
+</style>
+<div class="top pr">
+<div class="header">
+<div class="welcome">
+<h2>
+欢迎来到重庆某某机械设备有限公司官网！</h2>
+
+<div class="bookmark">
+<strong>|<a href="{dede:global.cfg_basehost/}" onclick="return addBookmark(this);"
+rel="sidebar">收藏我们</a>|<a href="/message/">在线留言</a>|<a
+href="/contact/">联系我们</a></strong></div>
+</div>
+<div class="t_head clearfix" style="position:relative;">
+<div class="top_l fl">
+<h1 class="logo fl">
+<a href="/" title="杭州广旭数控设备有限公司">
+<img src="/statics/images/logo.png"
+alt="杭州广旭数控设备有限公司" title="杭州广旭数控设备有限公司" /></a></h1>
+<div class="logo_slogan fl">
+<span></span>
+<br />
+<img src="/statics/images/logo_text.jpg" /></div>
+</div>
+<div class="top_r fr">
+<div class="fr">
+</div>
+<div class="tel fr">
+全国咨询热线<br />
+<span class="phone">{dede:global.cfg_tel/}</span></div>
+</div>
+<div class="wap_ma">
+<a href="/wap.php"><img src="/statics/images/wap.png"/>
+<span>手机版</span>
+</a>
+</div>
+</div>
+</div>
+<div class="nav_side menu">
+<ul class="nav">
+<li><a href="/"><span>网站首页</span></a></li>
+{dede:type typeid='2'}<li><a href="[field:typeurl/]"><span>产品中心</span></a></li>{/dede:type}
+{dede:type typeid='3'}<li><a href="[field:typeurl/]"><span>客户案例</span></a></li>{/dede:type}
+{dede:type typeid='1'}<li><a href="[field:typeurl/]"><span>关于我们</span></a></li>{/dede:type}
+{dede:type typeid='5'}<li><a href="[field:typeurl/]"><span>新闻资讯</span></a></li>{/dede:type}
+{dede:type typeid='8'}<li><a href="[field:typeurl/]"><span>公司相册</span></a></li>{/dede:type}
+{dede:type typeid='24'}<li><a href="[field:typeurl/]"><span>常见问题</span></a></li>{/dede:type}
+{dede:type typeid='49'}<li><a href="[field:typeurl/]"><span>联系我们</span></a></li>{/dede:type}
+{dede:type typeid='50'}<li class="nobg"><a href="[field:typeurl/]"><span>在线留言</span></a></li>{/dede:type}
+</ul>
+</div>
+</div>
+<div class="so_bg">
+<div class="searchbar clearfix">
+<div class="keywords fl">
+<b>热门关键词：</b> <span id="commonHeaderkeywords">{dede:tag row='10' getall='1' sort='month'}
+<a href='[field:link/]'>[field:tag /]</a>
+{/dede:tag}</span>
+</div>
+<div class="search fr">
+<form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+<input type="hidden" name="kwtype" value="0" />
+<input name="q" id="search-keyword" type="text" class="in_text" value="请输入关键词查询" onblur="if(this.value == ''){this.value = '请输入关键词查询';}"
+onclick="this.value='';"  />
+<input type="submit" class="so"  />
+</form>
+</div>
+</div>
+</div>
+

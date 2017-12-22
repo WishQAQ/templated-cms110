@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+    <link href="/statics/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/statics/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/statics/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/statics/css/temp.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">        var SKIN_PATH = "/Skins/default/";</script>
+    <link rel="stylesheet" rev="stylesheet" href="/statics/css/pshow2.css" type="text/css" />
+    <link rel="stylesheet" rev="stylesheet" href="/statics/css/jqzoom.css" type="text/css" />
+    <link rel="stylesheet" rev="stylesheet" href="/statics/css/base_v4.css" type="text/css" />
+    <script type="text/javascript" src="/statics/js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/statics/js/jqzoom.pack.1.0.1.js"></script>
+    <script type="text/javascript" src="/statics/js/common.js"></script>
+	</head>
+<body>
+    <!--Header:Start-->
+    
+<!--头部开始-->
+ {dede:include filename="head.htm"/}  
+    <!--Header:End-->
+    <!--Content:Start-->
+    <div class="content">
+        <div class="topadcs">
+            <a href='/Product/' title='广旭数控雕刻机行业的领跑者'><img src='/statics/images/20130924160500_39090.jpg' alt='广旭数控雕刻机行业的领跑者' title='广旭数控雕刻机行业的领跑者' /></a>
+        </div>
+       
+ <div class="left">
+        <div class="leib">
+            <div class="leib">
+			<div class="tit">联系我们</div>
+			<ul class="nr">
+			{dede:field.typeid runphp='yes' function="GetTopid(@me)"}if(@me=='50')@me='<li class="cur"><a href="/message/" >';else@me='<li><a href="/message/">';
+{/dede:field.typeid}在线留言</a></li>
+			</ul>
+			</div>
+        </div>
+   {dede:include filename="lr_contact.htm"/}
+
+</div>
+
+
+
+        <div class="right">
+            
+<div class="plc">
+    <span>{dede:field name='position'/}</span>
+	
+</div>
+            <div class="right_main mt10">
+                <div class="help_tab">
+                    <div class="bitian">
+                        <div>
+                            <span class="red_x1">*</span>表示必填</div>
+                        <h4 class="cont_tit">
+                            请留下您的问题,我们将尽快与您联系！</h4>
+                    </div>
+                    <h4 class="texts">
+                        <span>用户留言</span></h4>
+                  
+                <form action="/plus/diy.php" enctype="multipart/form-data" method="post" onSubmit="return checkForm();">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="2" />
+<input type="hidden" name="do" value="2" />
+
+                    <table class="tab_1" id="oran_table_1">
+                        
+                        <tr>
+                            <td class="tab_lt">
+                                <span class="red_x">*</span> 联系人：
+                            </td>
+                            <td>
+                                <input type="text" name='lxr' id='lxr' size="35" maxlength="32" />
+                                
+                                请填写您的姓名，方便我们联系您
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tab_lt">
+                                联系电话：
+                            </td>
+                            <td>
+                                <input  type="text" maxlength="4" name='tel1' id='tel1' style="width: 47px;" />
+                                <input  type="text" maxlength="10" name='tel2' id='tel2' style="width: 80px;" />
+                                <input  type="text" maxlength="5" name='tel3' id='tel3' style="width: 46px;" />
+                                固定电话(区号-电话号码-分机)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tab_lt">
+                                手机号码：
+                            </td>
+                            <td>
+                                <input  name='mob' id='mob' size="35" maxlength="16" />
+                                
+                                请填写您的手机号码
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tab_lt">
+                                <span class="red_x">*</span> 电子邮件：
+                            </td>
+                            <td>
+                                <input type="text" name='email' id='email' size="35" maxlength="128" />
+                                
+                                
+                                请填写您的电子邮件
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tab_lt tab_bz">
+                                <span class="red_x">*</span>备注：
+                            </td>
+                            <td>
+                                <textarea name='content' id='content' cols="80" rows="5" class="ks5"></textarea>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                请填写您的<span class="span_1">问题描述</span>，有您的支持，是我们不断前进的动力，<span class="span_1">感谢您的支持！</span>
+                            </td>
+                        </tr>
+						<input type='hidden' name='mytime' id='mytime' style='width:250px'  class='intxt' value='' />
+                       <script type="text/javascript">
+                    window.onload = function(){
+                    var nowDate = new Date();
+                    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)+"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds();
+                    document.getElementById("mytime").value=str;
+                    }
+                    </script>
+                        <tr id="cntrVerCode">
+	<td class="tab_lt">
+                                <span class="red_x">*</span> 验证码：
+                            </td>
+	<td>
+                            <input name="validate" type="text" class="i_img03" id="vdcode" style="text-transform:uppercase;" size="8"/>
+<img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;"alt="看不清？点击更换" src="../include/vdimgck.php"/>
+                                
+                            </td>
+</tr>
+
+                        <tr>
+                            <td>
+                            </td>
+							<input type="hidden" name="dede_fields" value="lxr,text;tel1,text;tel2,text;tel3,text;mob,text;email,text;content,multitext;mytime,text" />
+<input type="hidden" name="dede_fieldshash" value="5a50c4e03dd15d5f8d6396c94199c274" />
+                            <td>
+                                <input type="submit" name="submit" value="提 交" class="b17" />
+                                <input type="reset" name="reset" class="b18" value="重 填" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        </form>
+		<script>
+function checkForm()
+{
+	if($('#lxr').val()=='')
+	{
+		alert('提示：请输入联系人姓名！');
+        $('#lxr').focus();
+		return false;	
+	}
+	if($('#tel1').val()=='')
+	{
+		alert('提示：请输入您的座机区号！');
+		$('#tel1').focus();
+		return false;	
+	}
+	if($('#tel2').val()=='')
+	{
+		alert('提示：请输入您的座机号码！');
+		$('#tel2').focus();
+		return false;	
+	}
+	if($('#mob').val()=='')
+	{
+		alert('提示：请输入您的手机号码！');
+		$('#mob').focus();
+		return false;	
+	}
+	
+	if($('#mail').val()=='')
+	{
+		alert('提示：请输入您的邮箱！');
+		$('#mail').focus();
+		return false;	
+	}
+	if($('#content').val()=='')
+	{
+		alert('提示：请输入您的留言内容！');
+		$('#content').focus();
+		return false;	
+	}
+	return true;
+}
+</script>
+    </div>
+<!--content:end-->
+    <!--Content:End-->
+    <!--Footer:Start-->
+{dede:include filename="footer.htm"/}  
+    <!--Footer:End-->
+</body>
+</html>
+
+
+

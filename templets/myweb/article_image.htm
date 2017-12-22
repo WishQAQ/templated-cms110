@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="author" content="design by www.dede58.com" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+<link href="/statics/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/temp.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" rev="stylesheet" href="/statics/css/pshow2.css" type="text/css" />
+<link rel="stylesheet" rev="stylesheet" href="/statics/css/jqzoom.css" type="text/css" />
+<link rel="stylesheet" rev="stylesheet" href="/statics/css/base_v4.css" type="text/css" />
+<script type="text/javascript" src="/statics/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="/statics/js/jqzoom.pack.1.0.1.js"></script>
+<script type="text/javascript" src="/statics/js/common.js"></script>
+<script type="text/javascript" src="/statics/js/ajax.js"></script>
+<script type="text/javascript" src="/statics/js/inc.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}  
+<link href="/statics/css/magiczoom.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/statics/js/msclass.js"></script>
+
+<script type="text/javascript" src="/statics/js/mz-packed.js"></script>
+
+<script type="text/javascript" src="/statics/js/jqzoom.pack.1.0.1.js"></script>
+
+<script language="javascript" type="text/javascript">
+//产品标题
+var OBJ_TITLE = "{dede:field.title/}";
+//视频关键词
+var VIDEO_KEY = "";
+//权限ID
+var AUTHORITY_ID = "";
+//图片路径数组
+var ARR_IMG_PATH = [{dede:field name='imgurls' alt='图片输出区'}"[field:imgsrctrue/]", {/dede:field}];
+var ColumnID=29;
+var ProductID=320;
+var PColumnID="1";
+var ColumnName="{dede:field name='typename'/}";
+var HitLayer="ProductHits";
+var Hits=200;
+var MARK = "product";
+var ARR_AD_MARK = ["product_detail_1"];
+var SID = "{dede:field.id/}";
+var atts="";
+</script>
+
+
+<!--content:start-->
+<div class="content">
+<div class="topadcs">
+<a href='/Product/' title='广旭数控雕刻机行业知名品牌'><img src='/statics/images/20150327135144_53800.jpg' alt='广旭数控雕刻机行业知名品牌' title='广旭数控雕刻机行业知名品牌' /></a>
+</div>
+<div class="right1">
+<div class="pro_curmbs">
+{dede:field name='position'/}
+</div>
+<div class="pro_main mt10" id="con1">
+<div id="printableview">
+<div class="pleft">
+<div class="mainbox">
+<div class="maincont">
+<div class="prodetailsinfo">
+    <div class="proviewbox">
+        <div class="probigshow">
+     {dede:field name='id' function="GetFirstImg(@me)"/} 
+        </div>
+        <div class="div_prothumb">
+            <div class="thumbporbox">
+                <ul class="ul_prothumb" id="img_list">
+                </ul>
+            </div>
+            <span class="span_prev span_prevb">prev</span><span class="span_next span_nextb">next</span>
+        </div>
+        <div class="div_prolinks">
+            <a id="a_enlarge"  href="/plus/pic_view.php?id={dede:field.id/}">查看全部大图</a>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="/statics/js/pshow2.js"></script>
+
+</div>
+<div class="pright">
+<div class="propar">
+<h4 class="corange">{dede:field.title/}</h4>
+<div class="cpt pro_columns">
+产品分类： <span>{dede:field name='typename'/}</span>
+</div>
+<!--<div class="cpc attributes" id="attributes">
+<div class="nr_list"><ul></ul><div class="clear"></div></div>
+</div>-->
+<div class="cps">
+产品简介：{dede:field.jianjie/}</div>
+<div class="hotlines">
+订购热线：<span class="font_hotline">{dede:global.cfg_tel/}</span>
+</div>
+</div>
+<div class="propar" style="text-align: center; padding-top: 20px;">
+<div class="proparp">
+<a href="#caigou">
+    <img style="border: 0" src="/statics/images/buynowsmalls.gif" alt="" /></a></div>
+</div>
+</div>
+<div class="clear">
+</div>
+<img style="margin-top: 10px;" src="/statics/images/cpxq.jpg" />
+<div class="proinfo " id="detailvalue0">
+<div class="nr_list"><ul></ul><div class="clear"></div></div> <div id='contentvalue100' class="shouzi2" style='display:;'>
+{dede:field.body/}
+</div>
+</div>
+<div class="cp">
+<div class="cptab">
+<a href="javascript:void(0)" onmouseover="switchProdTab(this)" target_id="cptab_relevant"
+class="cr">跟此产品相关的产品</a>
+<!--<a href="javascript:void(0)" onmouseover="switchProdTab(this)"
+target_id="divRelevantViewedCntr">浏览过此产品的人还浏览过</a>-->
+<div class="clear">
+</div>
+</div>
+<div id="cntrRelevantProd">
+<div id="cptab_relevant">
+{dede:likeart titlelen='45' row='4'} 
+<dl><dt><a target='_blank' href="[field:arcurl/]" title="[field:fulltitle/]"><img src="[field:litpic/]" alt="[field:fulltitle/]" title="[field:fulltitle/]" /></a></dt><dd class="t1"><a target='_blank' href="[field:arcurl/]" title="[field:fulltitle/]">[field:title/]</a></dd></dl>
+{/dede:likeart}
+</div>
+<div id="divRelevantViewedCntr" style="display: none;">
+<img src="/statics/images/processing_2.gif" alt="正在加载..." /></div>
+</div>
+<div class="clear">
+</div>
+</div>
+
+
+
+<div class="caigou" id="caigou">
+<span class="span_1"><span class="red_x">*</span> 表示必填</span><strong>订购：{dede:field.title/}</strong></div>
+<script>
+function checkForm()
+{
+if($('#name').val()=='')
+{
+alert('提示：请输入联系人姓名！');
+$('#name').focus();
+return false;	
+}
+if($('#tel').val()=='')
+{
+alert('提示：请输入您的电话号码！');
+$('#tel').focus();
+return false;	
+}
+if($('#mail').val()=='')
+{
+alert('提示：请输入您的邮箱！');
+$('#mail').focus();
+return false;	
+}
+if($('#content').val()=='')
+{
+alert('提示：请输入您的留言内容！');
+$('#content').focus();
+return false;	
+}
+return true;
+}
+</script>
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post" onSubmit="return checkForm();">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+<table class="caigou_tab" id="tbForm1">
+<tr>
+<td width="120" class="tr">
+<span class="red_x">*</span> 联系人：
+</td>
+<td width="431">
+<input type="text" size="50" class="text" name='name' id='name'  />
+<span>请填写您的真实姓名</span>
+</td>
+</tr>
+
+<tr>
+<td class="tr">
+<span class="red_x">*</span> 手机号码：
+</td>
+<td>
+<input type="text" size="50" class="text" name='tel' id='tel' />
+<span>请填写您的联系电话</span>
+</td>
+</tr>
+<tr>
+<td class="tr">
+电子邮件：
+</td>
+<td>
+<input type="text" size="50" class="text" name='email' id='email' />
+</td>
+</tr>
+
+<tr>
+<td class="tt">
+<span class="red_x">*</span> 订购意向描述：
+</td>
+<td>
+<textarea cols="80" rows="5" class="textarea"  name='content' id='content'></textarea>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+请填写<span class="span_b">订购</span>的产品数量和产品描述，方便我们进行统一备货。
+</td>
+</tr>
+<input type='hidden' name='mytime' id='mytime' style='width:250px'  class='intxt' value='' />
+<script type="text/javascript">
+window.onload = function(){
+var nowDate = new Date();
+var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)+"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds();
+document.getElementById("mytime").value=str;
+}
+</script>
+<tr>
+<td class="tr vat">
+验证码：
+</td>
+<td>
+<input name="validate" type="text" class="i_img03" id="vdcode" style="text-transform:uppercase;" size="8"/>
+<img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;"alt="看不清？点击更换" src="/include/vdimgck.php"/>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,multitext;mytime,text" />
+<input type="hidden" name="dede_fieldshash" value="a11679820d0c6b1bc9abbf69217b8adf" />
+<input type="submit" name="submit" class="b15" value="提 交" />
+<input type="reset" name="reset" class="b15" value="重 填"  />
+</td>
+</tr>
+</table>
+</div>
+</form>
+
+
+</div>
+</div>
+<div class="left">
+<div class="pro_nav_side pr">
+<div class="sub_shadow">
+<div class="pro_til pa">
+<span>Product center</span><br />
+<a href="/product/" title="广旭数控产品系列">相关产品系列</a></div>
+<div class="pro_nav">
+{dede:channelartlist typeid=2 row=10}
+<h2><a href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}">{dede:field name='typename'/}</a></h2>
+<ul class='pro_nav_list clearfix'>
+{dede:sql sql='Select * from dede_arctype where reid=~id~  ORDER BY id limit 0,10'}
+<li><a href="[field:typedir function='str_replace("{cmspath}","",@me)'/]" title="[field:typename/]">[field:typename/]</a><p style='display:none;'></p></li>
+{/dede:sql}	
+</ul>
+{/dede:channelartlist}
+</div>
+</div>
+</div>
+<div id="divHistoryRecommentCntr" class="leib mt10">
+</div>
+
+{dede:include filename="lr_contact.htm"/}
+</div>
+<div class="clear">
+</div>
+</div>
+<script type="text/javascript">
+$(".pro_nav h2").click(function() {
+var index = $(".pro_nav h2").index(this);
+var temp = $(".pro_nav h2").eq(index).next("ul").is(":hidden");   //隐藏?
+if (temp == false) {
+$(".pro_nav h2").eq(index).next().hide();
+} else {
+$(".pro_nav h2").eq(index).next().show();
+}
+});
+</script>
+<script type="text/javascript">    productLoad(); initCommonHeaderKeywords(MARK);
+$(".jqzoom").jqzoom({ title: false, zoomWidth: 340, zoomHeight: 304, xOffset: 4 });
+</script>
+<!--content:end-->
+{dede:include filename="footer.htm"/}   
+</body>
+</html>

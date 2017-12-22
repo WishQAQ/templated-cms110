@@ -1,0 +1,90 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link href="/wapskin/css.css" rel="stylesheet" type="text/css">
+<link href="/wapskin/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+{dede:php}
+pasterTempletDiy("wap/head.htm");
+{/dede:php}
+<div class="ny_main">
+<div class="location">当前位置：{dede:field.position/}</div>
+<div class="article_content">
+<h1>{dede:field.title/}</h1>
+
+<div class="cpleft">
+<h2><span>效果图</span></h2>
+<div class="device">
+
+<a class="arrow-left" href="#"></a> 
+
+<a class="arrow-right" href="#"></a>
+
+<div class="swiper-container">
+
+<div class="swiper-wrapper">
+{dede:productimagelist} 
+<div class="swiper-slide"> <img src="[field:imgsrc/]" title="[field:text/]" alt="[field:text/]"> </div>							
+{/dede:productimagelist}
+</div>
+
+</div>
+<div class="pagination"></div>
+</div>
+<script src="/wapskin/js/jquery.min.js"></script>
+<script src="/wapskin/js/idangerous.swiper.min.js"></script>
+<script>
+
+var mySwiper = new Swiper('.swiper-container',{
+
+pagination: '.pagination',
+
+loop:true,
+
+speed:1000,
+
+grabCursor: true,
+
+paginationClickable: true
+
+})
+
+$('.arrow-left').on('click', function(e){
+
+e.preventDefault()
+
+mySwiper.swipePrev()
+
+})
+
+$('.arrow-right').on('click', function(e){
+
+e.preventDefault()
+
+mySwiper.swipeNext()
+
+})
+
+</script>
+
+<div class="cpright">
+<h2><span>详细介绍</span></h2>
+<div>{dede:field.body/}</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+{dede:php}
+pasterTempletDiy("wap/footer.htm");
+{/dede:php}
+</body>
+</html>

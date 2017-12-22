@@ -1,0 +1,85 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+<link href="/statics/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/temp.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/reset.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/statics/js/jquery.js"></script>
+<script type="text/javascript" src="/statics/js/common.js"></script>
+<script type="text/javascript" src="/statics/js/inc.js"></script>
+<script type="text/javascript" src="/statics/js/ajax.js"></script>
+</head>
+<body>
+    <!--Header:Start-->
+    
+<!--头部开始-->
+ {dede:include filename="head.htm"/} 
+    <!--Header:End-->
+    <!--Content:Start-->
+    <div class="content">
+        <div class="topadcs">
+            
+            <a href='/Product/' title='广旭数控专业的技术支持'><img src='/statics/images/20131213140426_36118.jpg' alt='广旭数控专业的技术支持' title='广旭数控专业的技术支持' /></a>
+        </div>
+        
+<div class="left">
+    <div class="leib">
+        <div class="tit">
+		<a href="/about/" title="关于我们">关于我们</a>
+		</div>
+		<ul class="nr">
+		{dede:channel type='sun' currentstyle="<li class='cur'><a href='~typelink~' ~rel~>~typename~</a></li>"}
+		<li><a href='[field:typelink/]' >[field:typename/]</a></li>
+	    {/dede:channel}
+		</ul>
+    </div>
+  {dede:include filename="lr_contact.htm"/}
+    </div>
+        <div class="right">
+            
+<div class="plc">
+    <span>{dede:field name='position'/}</span>
+	
+</div>
+            <div class="right_main mt10">
+                <div class="news_con">
+                     {dede:list pagesize='5' }
+                            <dl class="dl_2s">
+                                <dt><a href="[field:arcurl/]" title="[field:fulltitle/]" target="_blank">
+                                    <img src="[field:litpic/]" title="[field:fulltitle/]"  alt="[field:fulltitle/]" /></a></dt>
+                                <dd>
+                                    <h4>
+                                        <a href="[field:arcurl/]" title="[field:fulltitle/]" target="_blank">[field:title/]</a></h4>
+                                    [field:description function="cn_substr(@me,450)"/]...</dd>
+                            </dl>
+                        {/dede:list}  
+						  
+                  <div class="clear">
+                            </div>
+          
+ <div class="page">                  
+<div class="lmlpage">
+{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+</div></div>
+</div>
+              
+            </div>
+           
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <!--Content:End-->
+    <!--Footer:Start-->
+{dede:include filename="footer.htm"/}   
+    <!--Footer:End-->
+</body>
+</html>
+
+

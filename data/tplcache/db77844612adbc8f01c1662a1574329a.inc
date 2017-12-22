@@ -1,0 +1,1 @@
+<li><a href="[field:typeurl/]"><span>新闻资讯</span></a></li>

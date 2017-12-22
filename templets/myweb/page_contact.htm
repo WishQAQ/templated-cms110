@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+   <title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+    <link href="/statics/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/statics/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/statics/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/statics/css/temp.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" rev="stylesheet" href="/statics/css/pshow2.css" type="text/css" />
+    <link rel="stylesheet" rev="stylesheet" href="/statics/css/jqzoom.css" type="text/css" />
+    <link rel="stylesheet" rev="stylesheet" href="/statics/css/base_v4.css" type="text/css" />
+    <script type="text/javascript" src="/statics/js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/statics/js/jqzoom.pack.1.0.1.js"></script>
+    <script type="text/javascript" src="/statics/js/common.js"></script>
+    <script type="text/javascript" src="/statics/js/ajax.js"></script>
+    <script type="text/javascript" src="/statics/js/inc.js"></script>
+</head>
+<body>
+ {dede:include filename="head.htm"/} 
+<!--content:start-->
+<div class="content">
+    <div class="topadcs">
+        <a href="/Product/" title="广旭数控 雕刻机行业的领跑者"><img src="/statics/images/20141009125051_41411.jpg" title="广旭数控 雕刻机行业的领跑者" alt="广旭数控 雕刻机行业的领跑者" /></a>
+    </div>
+    <div class="left">
+        <div class="leib">
+            <div class="leib">
+			<div class="tit">联系我们</div>
+			<ul class="nr">
+			{dede:field.typeid runphp='yes' function="GetTopid(@me)"}if(@me=='49')@me='<li class="cur"><a href="/contact/" >';else@me='<li><a href="/contact/">';
+{/dede:field.typeid}联系我们</a></li>
+			</ul>
+			</div>
+        </div>
+        {dede:include filename="lr_contact.htm"/}
+    </div>
+    <div class="right">
+        <div class="plc">
+            <span class="">{dede:field name='position'/}</span>
+        </div>
+        <div class="right_main mt10">
+            <div class="agent_con">
+                <div class="age_li_about">
+                  {dede:field.content/} 
+                </div>
+                <div class="age_con_key">
+                    <div class="rt_bot_line">
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<!--content:end-->
+    <!--Content:End-->
+    <!--Footer:Start-->
+{dede:include filename="footer.htm"/}  
+    <!--Footer:End-->
+</body>
+</html>

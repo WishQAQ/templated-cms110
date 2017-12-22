@@ -1,0 +1,1 @@
+<div class="swiper-slide"> <img src="[field:imgsrc/]" title="[field:text/]" alt="[field:text/]"> </div>

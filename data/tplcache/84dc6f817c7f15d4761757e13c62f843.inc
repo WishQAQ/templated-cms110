@@ -1,0 +1,1 @@
+<li><a href="[field:typeurl/]"><span>公司相册</span></a></li>

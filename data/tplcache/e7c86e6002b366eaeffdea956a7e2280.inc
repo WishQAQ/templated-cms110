@@ -1,0 +1,1 @@
+<a href="/waplist.php?tid=[field:id/]">更多>></a>

@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/wapskin/css.css" rel="stylesheet" type="text/css">
+<script type='text/javascript' src='/wapskin/js/jquery-1.10.2.min.js'></script>
+
+</head>
+<body>
+{dede:php}
+pasterTempletDiy("wap/head.htm");
+{/dede:php}
+<div class="ny_main">
+<div class="location">当前位置：{dede:field.position/}</div>
+<div class="ny_nav">
+
+{dede:channel type='son' currentstyle="<li><a class='a1' href='/waplist.php?tid=~id~'>~typename~</a></li>"}
+<li><a href='/waplist.php?tid=[field:id/]'>[field:typename/]</a></li>
+{/dede:channel}
+</div>
+<div class="aboutlist">
+<ul>
+{dede:field.content/}
+</ul>
+</div>
+
+</div>
+{dede:php}
+pasterTempletDiy("wap/footer.htm");
+{/dede:php}
+</body>
+</html>

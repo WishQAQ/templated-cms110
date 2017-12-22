@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+<script type="text/javascript">SKIN_PATH="/Skins/default/";</script>
+<link href="/statics/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/temp.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/reset.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/statics/js/jquery.js"></script>
+<script type="text/javascript" src="/statics/js/common.js"></script>
+<script type="text/javascript" src="/statics/js/inc.js"></script>
+<script type="text/javascript" src="/statics/js/ajax.js"></script>
+</head>
+<body>
+<!--Header:Start-->
+
+<!--头部开始-->
+{dede:include filename="head.htm"/}   
+<!--Header:End-->
+<!--Content:Start-->
+<div class="content">
+<div class="topadcs">
+<a href="/product/" title="广旭数控雕刻机"><img src="/statics/images/20150327135144_53800.jpg" title="广旭数控雕刻机" alt="广旭数控雕刻机" /></a>
+
+</div>
+<div class="rightl">
+
+<div class="pro_curmbs">{dede:field name='position'/}</div>
+<div class="pro_main mt10">
+
+<div class="sample_cont clearfix">
+{dede:list pagesize='9'}
+[field:global name=autoindex runphp="yes"]
+if(@me%3==0)@me="<dl  class='hot_pro nomg'>";
+else @me=" <dl  class='hot_pro '>";
+[/field:global]
+<dt><a href="[field:arcurl/]" target="_blank"
+      title="“[field:fulltitle/]">
+      <img src="[field:litpic/]" alt="“[field:fulltitle/]" title="“[field:fulltitle/]" /></a></dt>
+  <dd>
+      <a href="[field:arcurl/]" target="_blank"
+          title="“[field:fulltitle/]">[field:title/]</a></dd>
+</dl>
+{/dede:list}
+
+</div>
+
+
+<div class="clear">
+</div>
+<div class="page">                  
+<div class="lmlpage">
+{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+</div></div>
+
+</div>
+
+<div class="RandomNews mt10">
+<h4 class="diysr">
+推荐资讯</h4>
+<div class="news_random">
+<ul>
+{dede:arclist typeid=5 row=20 titlelen=20 orderby=click }
+  <li><span class="fr">
+      [field:pubdate function=MyDate('Y-m-d',@me)/]</span><a target="_blank"
+          href="[field:arcurl/]" title="[field:fulltitle/]">
+          [field:title/]</a></li>
+{/dede:arclist}
+
+<div class="clear">
+</div>
+</ul>
+</div>
+</div>
+</div>
+<div class="leftr">
+
+<div class="pro_nav_side pr">
+<div class="sub_shadow">
+<div class="pro_til pa">
+<span>Product center</span><br />
+<a href="/Product/" title="数控产品系列">数控产品系列</a></div>
+<div class="pro_nav">
+{dede:channelartlist typeid=2 row=10}
+<h2><a href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}">{dede:field name='typename'/}</a></h2>
+<ul class='pro_nav_list clearfix'>
+{dede:sql sql='Select * from dede_arctype where reid=~id~  ORDER BY id limit 0,10'}
+<li><a href="[field:typedir function='str_replace("{cmspath}","",@me)'/]" title="[field:typename/]">[field:typename/]</a><p style='display:none;'></p></li>
+{/dede:sql}	
+</ul>
+{/dede:channelartlist}
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+$(".pro_nav h2").click(function() {
+var index = $(".pro_nav h2").index(this);
+var temp = $(".pro_nav h2").eq(index).next("ul").is(":hidden");   //隐藏?
+if (temp == false) {
+$(".pro_nav h2").eq(index).next().hide();
+} else {
+$(".pro_nav h2").eq(index).next().show();
+}
+});
+</script>
+{dede:include filename="lr_contact.htm"/}
+</div>
+<script type="text/javascript">
+if ($("div.rightl").height() > 900) {
+$("#righttuijian").hide().next("div.rightbot").hide();
+} else {
+$("#lefttuijian").hide();
+}
+
+if ("0001,0009" == "0001,0035") {
+$("#lefttuijian").hide();
+}
+</script>
+
+<div class="clear">
+</div>
+<div id="mailArticle">
+</div>
+</div>
+<!--Content:End-->
+<!--Footer:Start-->
+
+{dede:include filename="footer.htm"/}   
+
+<!--Footer:End-->
+</body>
+</html>
+
+
+

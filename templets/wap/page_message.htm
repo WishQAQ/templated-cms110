@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/wapskin/css.css" rel="stylesheet" type="text/css">
+<script type='text/javascript' src='/wapskin/js/jquery-1.10.2.min.js'></script>
+<style>
+.inputBox{ height:40px;}
+input{ height:25px; line-height:25px; border:1px solid #ccc;}
+</style>
+</head>
+<body>
+{dede:php}
+pasterTempletDiy("wap/head.htm");
+{/dede:php}
+<div class="ny_main">
+<div class="location">当前位置：{dede:field.position/}</div>
+
+<div class="aboutlist">
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="mytime" id="mytime" value="" />
+<input type="hidden" name="do" value="2" />
+
+          <div class="inputBox overflow">
+            <label>姓名：</label>
+            <input type='text' name='name' id='name' style='width:180px'  class='intxt' value='' />
+          </div>
+         
+          <div class="inputBox overflow">
+            <label>联系电话：</label>
+            <input type='text' name='tel' id='tel' style='width:180px'  class='intxt' value='' />
+          </div>
+          <div class="inputBox overflow">
+            <label>电子邮箱：</label>
+            <input type='text' name='email' id='email' style='width:180px'  class='intxt' value='' />
+          </div>
+          <div class="inputBox1 overflow">
+            <label>留言内容：</label>
+            <textarea name='content' id='content' style='width:80%;height:80px'></textarea>
+          </div>
+          
+           <div class="inputBox1 overflow"><label>验证码：</label><div class="code">
+<input name="validate" type="text" class="i_img03" id="vdcode" style="text-transform:uppercase;" size="8"/>
+<img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;"alt="看不清？点击更换" src="../include/vdimgck.php"/>
+        </div> </div>
+          
+          
+         <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,multitext;mytime,text" />
+<input type="hidden" name="dede_fieldshash" value="a11679820d0c6b1bc9abbf69217b8adf" />
+<script type="text/javascript">
+window.onload = function(){
+var nowDate = new Date();
+var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)+"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds();
+document.getElementById("mytime").value=str;
+}
+</script>
+          </table>
+          <div class="inputBoxSub overflow">
+            <input type="submit" name="submit" id="submit" value="提 交" class='coolbg' />
+            <input type="reset" name="reset" value="重 置" class='coolbg' />
+          </div>
+        </form>
+</div>
+
+</div>
+{dede:php}
+pasterTempletDiy("wap/footer.htm");
+{/dede:php}
+</body>
+</html>

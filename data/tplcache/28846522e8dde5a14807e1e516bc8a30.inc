@@ -1,0 +1,1 @@
+<li><a href="[field:typedir function='str_replace("{cmspath}","",@me)'/]" title="[field:typename/]">[field:typename/]</a><p style='display:none;'></p></li>

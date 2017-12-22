@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<title>搜索页_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/statics/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/temp.css" rel="stylesheet" type="text/css" />
+<link href="/statics/css/reset.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/statics/js/jquery.js"></script>
+<script type="text/javascript" src="/statics/js/common.js"></script>
+<script type="text/javascript" src="/statics/js/inc.js"></script>
+<script type="text/javascript" src="/statics/js/ajax.js"></script>
+</head>
+<body>
+    <!--Header:Start-->
+    
+<!--头部开始-->
+ {dede:include filename="head.htm"/} 
+ <!--Header:End-->
+    <!--Content:Start-->
+    <div class="content"><div class="topadcs">
+            <a href='/product/' title='广旭数控雕刻机行业领导品牌'><img src='/statics/images/20150326153658_47624.jpg' alt='广旭数控雕刻机行业领导品牌' title='广旭数控雕刻机行业领导品牌' /></a>
+        </div>
+        <div class="plc2">
+            当前位置：{dede:field name='position'/}</div>
+        <div class="left2">
+            <div class="left2_main mt10">
+                <div class="search_con">
+                     {dede:list perpage='20'} 
+                            <div class="l2tit" style="width: 95%;">
+                                [[field:typename/]]
+                                <a href="[field:arcurl/]" class="f14">
+                                    [field:title/]</a><span class="f11">[[field:pubdate function=MyDate('Y-m-d',@me)/]]</span></div>
+                            <div class="clear">
+                            </div>
+                            <dl class="sear_dl">
+                                <dt class="dt2"><a href="[field:arcurl/]">
+                                    <img src="[field:litpic/]" /></a></dt>
+                                <dd class="d2">
+                                    <a href="[field:arcurl/]"
+                                        class="cRed">[查看]</a></dd>
+                                <dd>
+                                    <a href="[field:arcurl/]" class="a_d">
+                                        [field:arcurl/]</a><img src="/statics/images/x3.gif"
+                                            alt="3星" class="vam" /></dd>
+                            </dl>
+                     {/dede:list}
+                      
+                    <div class="rele_search">
+                        <h5>
+                            相关搜索</h5>
+                        <ul>
+                            
+                            <li id="noRelevantSearch">{dede:likewords num='8'/}</li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                    </div>
+                
+<div id="pagerMain" class="apage">{dede:pagelist listsize='4'/} </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="right2">
+            <div class="right2_main mt10">
+                <h4 class="t03">
+                    <a href="/news/">最新资讯</a></h4>
+                <ul class="n_rt_ul2">
+                    
+                          {dede:arclist typeid=5 row=20 titlelen=36 orderby=pubdate }
+                            <li>
+                                <img src="/statics/images/sico15.gif" alt="[field:fulltitle/]" title="[field:fulltitle/]" /><a
+                                    href="[field:arcurl/]" title="[field:fulltitle/]">
+                                    [field:title/]</a></li>
+                         {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <!--Content:End-->
+    <!--Footer:Start-->
+{dede:include filename="footer.htm"/} 
+</body>
+</html>
+
